@@ -1,0 +1,81 @@
+button {
+  position: fixed;
+  left: 50%;
+  margin-left: -8rem;
+  bottom: 3rem;
+  background: #3FD481;
+  box-shadow: 0 6px 20px 0 rgba(63, 212, 129, 0.74);
+  border-radius: 20px;
+  width: 16rem;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 16px;
+  display: block;
+  color: #fff;
+}
+
+ul {
+  padding: 12px 1.23rem;
+}
+
+ul li {
+  background: #FFFFFF;
+  box-shadow: 2px 0 18px 0 rgba(0, 0, 0, 0.07);
+  border-radius: 2px;
+  margin-bottom: 10px;
+}
+
+ul li a {
+  display: block;
+}
+
+ul li .item {
+  padding: 22px 2.53rem 22px 2rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  position: relative;
+}
+
+ul .item .state {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 0;
+  right: 0;
+  background: #212121;
+}
+
+ul li .item .name {
+  font-size: 18px;
+  color: #212121;
+}
+
+ul li .item .user-info {
+  flex: 1;
+}
+
+ul li .item .card-num {
+  font-size: 14px;
+  color: #9B9B9B;
+  margin-top: 4px;
+}
+
+ul li .item .head {
+  width: 3.1538rem;
+  height: 3.1538rem;
+  background: #fbfbfb;
+  margin-right: 1.15rem;
+}
+
+ul li .item .head img {
+  display: block;
+  width: 3.1538rem;
+  height: 3.1538rem;
+}
+
+.look {
+  font-size: 9px;
+  color: #4D4D4D;
+}

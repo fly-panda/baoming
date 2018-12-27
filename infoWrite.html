@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>信息填写</title>
+  <script src="./js/flexible.js"></script>
+  <link rel="stylesheet" href="./style/reset.css">
+  <link rel="stylesheet" href="./style/infoWrite.css">
+</head>
+
+<body>
+  <div class="resgister">
+
+    <div class="box">
+      <div class="title">报名人基本信息</div>
+      <div class="cell">
+        <div class="label">姓名</div>
+        <div class="input-text">张三</div>
+      </div>
+      <div class="cell">
+        <div class="label">身份证号</div>
+        <div class="input-text">12345151515151515151515</div>
+      </div>
+    </div>
+
+    <div class="box box1">
+      <div class="title">填写信息</div>
+      <div class="cell">
+        <div class="label">初中学校</div>
+        <input type="text" placeholder="请输入初中学校名称">
+      </div>
+      <div class="cell">
+        <div class="label">班级</div>
+        <input type="text" placeholder="请输入班级信息">
+      </div>
+      <div class="cell upload-img">
+        <div class="tip">请上传证件照</div>
+        <div class="upload-box">
+          <img src="./img/noimg.png" alt="">
+          <div>照片不能超过5M</div>
+          <input class="files" id="filesImg" type="file" accept="image/*" @change="fileImage">
+        </div>
+      </div>
+    </div>
+
+    <div class="box box1">
+      <div class="title border-bottom-none">报名须知</div>
+      <a href="" class="link">《弥勒市教育局2018年秋季学期城区小学招生公告》</a>
+      <button>确认</button>
+    </div>
+
+  </div>
+  <script src="http://libs.baidu.com/jquery/2.1.1/jquery.min.js"></script>
+</body>
+
+</html>

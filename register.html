@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>信息填写</title>
+  <script src="./js/flexible.js"></script>
+  <link rel="stylesheet" href="./style/reset.css">
+  <link rel="stylesheet" href="./style/register.css">
+</head>
+<body>
+  <div class="resgister">
+    <div class="box">
+      <div class="title">报名人基本信息</div>
+      <div class="cell">
+        <div class="label">姓名</div>
+        <input id="name" type="text" placeholder="请输入姓名">
+      </div>
+      <div class="cell">
+        <div class="label">身份证号</div>
+        <input id="card" type="number" placeholder="请输入身份证号码">
+      </div>
+      <button disabled>确认</button>
+    </div>
+  </div>
+
+
+
+  <!-- 不在招生范围内 -->
+  <div class="model">
+    <div class="content">
+      <div>
+        
+      </div>
+    </div>
+  </div>
+
+  <script src="http://libs.baidu.com/jquery/2.1.1/jquery.min.js"></script>
+  <script>
+    $("#name").bind('input propertychange',function(){
+      let name = $(this).val()
+      let card = $('#card').val()
+      if(name && card) {
+        console.log(11111)
+        $('button').removeAttr('disabled')
+      } else {
+        $('button').attr('disabled','disabled')
+      }
+    });
+    $("#card").bind('input propertychange',function(){
+      let card = $(this).val()
+      let name = $('#name').val()
+      if(name && card) {
+        $('button').removeAttr('disabled')
+      } else {
+        $('button').attr('disabled','disabled')
+      }
+    });
+  </script>
+</body>
+</html>
