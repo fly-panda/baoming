@@ -35,7 +35,7 @@ input {
 }
 
 .label {
-  font-size: 17px;
+  font-size: 1.3rem;
   color: #4D4D4D;
   width: 70px;
 }
@@ -52,8 +52,10 @@ input {
 }
 
 .input-text {
-  font-size: 16px;
+  font-size: 1.2rem;
   color: #212121;
+  flex: 1;
+  text-align: right;
 }
 
 button {
@@ -129,4 +131,27 @@ button[disabled] {
   font-size: 12px;
   color: #699CE4;
   margin-top: 20px;
+}
+
+.uploadHead {
+  margin-top: 13px;
+}
+
+.img-show {
+  position:  relative;
+  margin-top: 13px;
+}
+
+.img-show .del {
+  position:  absolute;
+  top: 5px;
+  right: 5px;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 15px;
 }

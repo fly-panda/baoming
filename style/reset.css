@@ -32,3 +32,9 @@ input,textarea{
   -webkit-appearance:none;  /*清除浏览器默认的样式 */
   line-height: normal;   
 }
+.none {
+  display: none;
+}
+.block {
+  display: block;
+}
