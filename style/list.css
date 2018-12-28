@@ -79,3 +79,18 @@ ul li .item .head img {
   font-size: 9px;
   color: #4D4D4D;
 }
+
+.box {
+  position: absolute;
+  left:  0;
+  width: 100%;
+  text-align: center;
+  top: 35%;
+  margin-top: -60px;
+}
+
+.box .text {
+  font-size: 14px;
+  color: #9B9B9B;
+  margin-top: 30px;
+}
