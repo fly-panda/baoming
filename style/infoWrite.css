@@ -93,8 +93,8 @@ button[disabled] {
 }
 .upload-box {
   position: relative;
-  background: #FFFFFF;
-  border: 1px dashed #C1C1C1;
+  background: url(../img/noImg.png);
+  background-size: 100%;
   width: 118px;
   height: 116px;
   margin-top: 14px;
@@ -105,6 +105,10 @@ button[disabled] {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+}
+
+.upload-box div {
+  margin-top: 60px;
 }
 
 .upload-box input {
