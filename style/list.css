@@ -1,4 +1,4 @@
-button {
+.button {
   position: fixed;
   left: 50%;
   margin-left: -8rem;
@@ -17,6 +17,7 @@ button {
 
 ul {
   padding: 12px 1.23rem;
+  padding-bottom: 80px;
 }
 
 ul li {
@@ -40,11 +41,10 @@ ul li .item {
 
 ul .item .state {
   position: absolute;
-  width: 20px;
-  height: 20px;
+  width: 51px;
+  height: 51px;
   top: 0;
   right: 0;
-  background: #212121;
 }
 
 ul li .item .name {

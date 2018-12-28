@@ -93,7 +93,7 @@ button[disabled] {
   left: 0;
 }
 
-.model .close {
+.model .close-model {
   position:  absolute;
   right: 3.07rem;
   top: 3rem;
@@ -101,20 +101,25 @@ button[disabled] {
   height: 30px;
   text-align: center;
   line-height: 32px;
-  border: 2px solid #fff;
-  color: #fff;
+  /* border: 2px solid #fff; */
+  /* color: #fff; */
   font-size: 16px;
   border-radius: 50%;
 }
 
 .model .window {
   position: absolute;
-  background: #fff;
-  width: 18.4rem;
+  background: url(../img/model-bg.png);
+  background-size: 100%;
+  width: 21rem;
+  height: 21rem;
   left: 50%;
-  top: 50%;
+  top: 25%;
   margin-left: -9.2rem;
   text-align: center;
+  box-sizing: border-box;
+  padding-top: 13rem;
+  padding-right: 1rem;
 }
 
 .model p {

@@ -21,16 +21,16 @@
         <div class="label">身份证号</div>
         <input id="card" type="number" placeholder="请输入身份证号码">
       </div>
-      <button disabled>确认</button>
+      <button class="button" disabled>确认</button>
     </div>
   </div>
 
 
 
   <!-- 不在招生范围内 -->
-  <div class="model">
+  <div class="model none">
     <div class="content">
-      <div class="close">X</div>
+      <img class="close-model" src="./img/del.png" alt="">
       <div class="window">
         <p>您不在本次招生范围内</p>
         <p class="tip">请联系相关招生老师！</p>
@@ -59,6 +59,12 @@
         $('button').attr('disabled','disabled')
       }
     });
+    $('.close-model').click(function() {
+      $('.model').removeClass('block')
+    })
+    $('.button').click(function() {
+      $('.model').addClass('block')
+    })
   </script>
 </body>
 </html>
