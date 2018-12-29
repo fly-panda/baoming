@@ -40,25 +40,52 @@
         <div class="tip">请上传证件照</div>
         <!-- 展示上传的图片 -->
         <div class="img-show none">
-          <img src="img/head.jpg" alt="" width="82" height="117">
-          <div class="del">x</div>
+          <img src="" alt="" width="82" height="117" id="showimg">
+          <div class="del-img">x</div>
         </div>
         <!-- 上传图片 -->
         <div class="upload-box">
           <div>照片不能超过5M</div>
-          <input class="files" id="filesImg" type="file" accept="image/*" @change="fileImage">
+          <input type="file" id="fileinput" class="inputfile" accept="image/*">
         </div>
       </div>
     </div>
 
     <div class="box box1">
       <div class="title border-bottom-none">报名须知</div>
-      <a href="" class="link">《弥勒市教育局2018年秋季学期城区小学招生公告》</a>
+      <a href="jianzhang.html" class="link">《弥勒市教育局2018年秋季学期城区小学招生公告》</a>
       <button>确认</button>
     </div>
 
   </div>
   <script src="http://libs.baidu.com/jquery/2.1.1/jquery.min.js"></script>
+  <script>
+    $('#fileinput').on('change', function () {
+      console.log(this.files[0])
+      var objUrl = getObjectURL(this.files[0]) ; //获取图片的路径，该路径不是图片在本地的路径
+      if (objUrl) {
+        $("#showimg").attr("src", objUrl) ; //将图片路径存入src中，显示出图片
+        $('.upload-box').addClass('none')
+        $('.img-show').removeClass('none')
+      }
+    })
+    $('.del-img').click(function() {
+      // $('#showimg').attr('src', '')
+      $('.img-show').addClass('none')
+      $('.upload-box').removeClass('none')
+    })
+    function getObjectURL(file) {
+      var url = null;
+      if (window.createObjectURL != undefined) { // basic
+        url = window.createObjectURL(file);
+      } else if (window.URL != undefined) { // mozilla(firefox)
+        url = window.URL.createObjectURL(file);
+      } else if (window.webkitURL != undefined) { // webkit or chrome
+        url = window.webkitURL.createObjectURL(file);
+      }
+      return url;
+    }
+  </script>
 </body>
 
 </html>
