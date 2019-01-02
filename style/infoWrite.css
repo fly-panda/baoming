@@ -4,13 +4,13 @@ body {
 .resgister {
   padding: 12px 16px;
 }
-.box {
+.resgister .box {
   background: #FFFFFF;
   box-shadow: 2px 0 18px 0 rgba(0,0,0,0.07);
   border-radius: 2px;
   padding-bottom: 20px;
 }
-.title {
+.resgister .title {
   position: relative;
   font-size: 18px;
   color: #212121;
@@ -40,7 +40,7 @@ input {
   width: 7rem;
 }
 
-.title::after {
+.resgister .title::after {
   position: absolute;
   content: '';
   background: #48D687;
@@ -159,3 +159,16 @@ button[disabled] {
   font-size: 12px;
   line-height: 15px;
 }
+
+.model { background: #f7f7f7; padding: 12px 1.1rem;position: relative; }
+.close-btn {
+  position: absolute;
+  right: 1.5rem;
+  top: 20px;
+  width: 22px;
+}
+.model .list {background: #FFFFFF;border-radius: 2px;padding: 20px 1.8rem;}
+.model .title1 {font-size: 16px;color: #0F0F0F;font-weight: 600;}
+.model .title {font-size: 14px;color: #0F0F0F;font-weight: 600;}
+.model .box {line-height: 30px;}
+.model p{font-size: 14px;color: #0F0F0F;}
