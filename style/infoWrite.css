@@ -28,7 +28,7 @@ body {
   margin: 0 1.53rem;
 } 
 
-input {
+.resgister input {
   font-size: 14px;
   text-align: right;
   flex: 1;
@@ -65,7 +65,7 @@ button {
   line-height: 40px;
   text-align: center;
   margin: 0 auto;
-  margin-top: 20px;
+  /* margin-top: 20px; */
   font-size: 16px;
   display: block;
   background: #3FD481;
@@ -251,4 +251,92 @@ button[disabled] {
 
 .model1 .btn-box .cencel {
   color: #787878;
+}
+
+.bmxz-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px 0 24px;
+  font-size: 14px;
+  color: #4D4D4D;
+}
+
+.openxz {
+  border: 1px solid #00D977;
+  border-radius: 2px;
+  width: 88px;
+  height: 29px;
+  text-align: center;
+  line-height: 29px;
+  color: #00D977;
+}
+
+.model button {
+  background: #3FD481;
+  box-shadow: 0 6px 20px 0 rgba(63, 212, 129, 0.74);
+  border-radius: 20px;
+  width: 16rem;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 16px;
+  display: block;
+  color: #fff;
+  margin: 0 auto;
+  margin-top: 44px;
+  margin-bottom: 30px;
+}
+.model .label-box {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+.model label {
+  display: block;
+  font-size: 14px;
+  color: #212121;
+  position: relative;
+}
+.lcimg {width: 100%;}
+
+
+
+
+
+.label-box input[type=checkbox] + label::before {
+  content: "\a0";  /* 不换行空格 */
+  display: inline-block;
+  vertical-align: 2px;
+  width: 14px;
+  height: 14px;
+  margin-right: 5px;
+  /* border-radius: 3px; */
+  border: 1px solid #F0F0F0;
+  background-color: #fff;
+  text-indent: 2px;
+  line-height: .65;  /* 行高不加单位，子元素将继承数字乘以自身字体尺寸而非父元素行高 */
+}
+.label-box input[type="checkbox"]:checked + label::before {
+   /* 对号的 Unicode 编码 */
+  background-color: #3FD481; /* 选中的背景颜色 */
+  color: #fff;
+}
+.label-box input[type="checkbox"]:checked + label::after {  
+  position: absolute;
+  width: 19px;
+  height: 19px;
+  content: '';
+  background: url('../img/dh.png');
+  background-size: 100%;
+  top: 0;
+  left: 0;
+}
+
+.label-box input[type='checkbox'] {
+  /* 隐藏掉原先实际的 checkbox 框，之所以没用 display:none; 这种简单直接的方式，
+     是因为这种方法会把它从键盘 tab 键切换焦点的队列中完全删除 */
+  position: absolute;
+  clip:rect(0,0,0,0);       /* 隐藏方式一：裁剪为0 */
+  /* visibility: hidden; */ /* 隐藏方式二：隐藏属性 */
 }
