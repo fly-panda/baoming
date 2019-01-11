@@ -74,7 +74,7 @@
     </div>
 
     <div class="box submit-box">
-      <button class="submit-btn">确认</button>
+      <button class="submit-btn" disabled>确认</button>
     </div>
 
   </div>
@@ -95,7 +95,7 @@
 
   <!-- 报名须知 -->
   <div class="model none">
-    <img class="close-btn" src="img/close-model.png" alt="">
+    <!-- <img class="close-btn" src="img/close-model.png" alt=""> -->
     <div class="content">
       <div class="list">
         <div class="box">
@@ -124,11 +124,11 @@
           <p>点击“同意”，即表示您已认真阅读上述“须知”内容并且同意其中条款。</p>
         </div>
         <div class="label-box">
-          <input name="Fruit" type="checkbox" value="" id='check' checked/>
+          <input name="Fruit" type="checkbox" value="" id='check'/>
           <label for="check">我已阅读相关材料</label>
         </div>
         <div>
-          <button class="bmxz-btn">确认</button>
+          <button class="bmxz-btn" disabled>确认</button>
         </div>
       </div>
     </div>
@@ -194,8 +194,10 @@
     $('#check').change(function() {
       if($(this).prop('checked') == true) {
         $('.bmxz-btn').removeAttr('disabled')
+        $('.submit-btn').removeAttr('disabled')
       } else {
         $('.bmxz-btn').attr('disabled', 'true')
+        $('.submit-btn').attr('disabled', 'true')
       }
     })
     $('.openxz').click(function () {
