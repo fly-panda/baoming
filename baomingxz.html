@@ -39,45 +39,112 @@
       font-size: 14px;
       color: #212121;
     }
+    .label-box {
+      position: relative;
+    }
+    .label-box input[type=checkbox] + label::before {
+      content: "\a0";  /* 不换行空格 */
+      display: inline-block;
+      vertical-align: 2px;
+      width: 14px;
+      height: 14px;
+      margin-right: 5px;
+      /* border-radius: 3px; */
+      border: 1px solid #F0F0F0;
+      background-color: #fff;
+      text-indent: 2px;
+      line-height: .65;  /* 行高不加单位，子元素将继承数字乘以自身字体尺寸而非父元素行高 */
+    }
+    .label-box input[type="checkbox"]:checked + label::before {
+       /* 对号的 Unicode 编码 */
+      background-color: #3FD481; /* 选中的背景颜色 */
+      color: #fff;
+    }
+    .label-box input[type="checkbox"]:checked + label::after {  
+      position: absolute;
+      width: 19px;
+      height: 19px;
+      content: '';
+      background: url('./img/dh.png');
+      background-size: 100%;
+      top: 0;
+      left: 0;
+    }
+
+    .label-box input[type='checkbox'] {
+      /* 隐藏掉原先实际的 checkbox 框，之所以没用 display:none; 这种简单直接的方式，
+         是因为这种方法会把它从键盘 tab 键切换焦点的队列中完全删除 */
+      position: absolute;
+      clip:rect(0,0,0,0);       /* 隐藏方式一：裁剪为0 */
+      /* visibility: hidden; */ /* 隐藏方式二：隐藏属性 */
+    }
+    .bmxz-btn[disabled] {
+      background: #F0F0F0;
+      box-shadow: 0 6px 20px 0 rgba(63, 212, 129, 0);
+    }
+    input[type="checkbox"] {
+      -webkit-appearance: checkbox;
+      box-sizing: border-box;
+      margin-right: 4px;
+      width: 19px;
+      height: 19px;
+    }
   </style>
 </head>
 
 <body>
-  <div class="content"> 
-    <div class="list">
-      <div class="box">
-        <div class="title1">欢迎报考上饶县中学，考生在报考前请务必认真阅读以下条款：</div>
-        <p>1、考生进行网上报名前，请务必认真阅读《上饶县中学2019年自主招生公告》，了解报考信息和网上报名说明，不按要求报名，误报、错报信息或填报虚假信息。</p>
-      </div>
-      <div class="box">
-        <div class="title">2、招生对象：</div>
-        <p>具有学科特长和创新潜质的2019届初中学生，如非本届学生获没有学校推荐，报名无效。 </p>
-      </div>
-      <div class="box">
-        <div class="title">3、招生条件：</div>
-        <p>参加报名的考生成绩需在全县排名前1000名（具体以初中学校推荐名单为主）。</p>
-      </div>
-      <div class="box">
-        <div class="title">4.报名流程：</div>
-        <img class="lcimg" src="img/picture@2x.png" alt="">
-      </div>
-      <div class="box">
-        <div class="title">5、录取情况查询：</div>
-        <p>请考生在自主招生考试结束3天后，凭个人信息登录报名系统查询考试成绩和录取结果。</p>
-      </div>
-      <div class="box">
-        <div class="title">6、报名起止时间：</div>
-        <p>元月14日至19日</p>
-        <p>点击“同意”，即表示您已认真阅读上述“须知”内容并且同意其中条款。</p>
-      </div>
-      <label><input name="Fruit" type="checkbox" value="" />我已阅读相关材料</label> 
-      <div>
-        <button class="btn" disabled>确认</button>
+  <div class="content">
+      <div class="list">
+        <div class="box">
+          <div class="title1">欢迎报考上饶县中学，考生在报考前请务必认真阅读以下条款：</div>
+          <p>1、考生进行网上报名前，请务必认真阅读《上饶县中学2019年学科竞赛方案》，了解竞赛报考信息和网上报名说明，不按要求报名，误报、错报信息或填报虚假信息。</p>
+        </div>
+        <div class="box">
+          <div class="title">2、招生对象：</div>
+          <p>具有学科特长和创新潜质的2019届初中学生，如非本届学生或没有学校推荐，报名将有可能审核不通过，审核不通过者不能打印准考证。</p>
+        </div>
+        <div class="box">
+          <div class="title">3、招生条件：</div>
+          <p>参加报名的考生成绩需在全县1000名左右（初中学校推荐，结合成绩）。</p>
+        </div>
+        <div class="box">
+          <div class="title">4.报名流程：</div>
+          <img class="lcimg" src="img/picture@2x.png" alt="">
+        </div>
+        <div class="box">
+          <div class="title">5、录取情况查询：</div>
+          <p>请考生在自主招生考试结束3天后，凭个人信息登录报名系统查询考试成绩和录取结果。</p>
+        </div>
+        <div class="box">
+          <div class="title">6、报名起止时间：</div>
+          <p>元月15日至18日</p>
+          <p>点击“同意”，即表示您已认真阅读上述“须知”内容并且同意其中条款。</p>
+        </div>
+        <div class="label-box">
+          <input name="Fruit" type="checkbox" value="" id='check'/>
+          <label for="check">我已阅读相关材料</label>
+        </div>
+        <div>
+          <button class="bmxz-btn" disabled>同意</button>
+        </div>
       </div>
     </div>
-  </div>
   
   <script src="http://libs.baidu.com/jquery/2.1.1/jquery.min.js"></script>
+  <script>
+    console.log(11)
+    $('#check').removeAttr('checked')
+    $('#check').change(function() {
+      if($(this).prop('checked') == true) {
+        $('.bmxz-btn').removeAttr('disabled')
+      } else {
+        $('.bmxz-btn').attr('disabled', 'true')
+      }
+    })
+    $('.bmxz-btn').click(function () {
+      window.location.href = 'list.html'
+    })
+  </script>
 </body>
 
 </html>
