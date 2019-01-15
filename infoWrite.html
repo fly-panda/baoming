@@ -262,6 +262,7 @@
 
     $('#select').bind('change', function() {
       console.log(this.value)
+      $('.school-name').val('')
       if(this.value == 'other') {
         $('.school-name').removeClass('none')
       } else {
