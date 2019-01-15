@@ -10,6 +10,11 @@
   <link rel="stylesheet" href="./style/reset.css">
   <link rel="stylesheet" href="./style/infoWrite.css">
   <style>
+    select {
+      appearance:none;
+      -moz-appearance:none;
+      -webkit-appearance:none;
+    }
     .submit-box{padding: 30px 0;margin-top: 12px;}
     .bmxz-btn[disabled] {
       background: #F0F0F0;
@@ -21,6 +26,24 @@
       margin-right: 4px;
       width: 19px;
       height: 19px;
+    }
+    select {
+      background: #fff;
+      font-size: 14px;
+      direction: rtl;
+    }
+    .school-name {
+      width: 100%;
+      margin-top: 10px;
+    }
+    .cell-school {
+      flex-direction: column;
+    }
+    .cell-school > div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
     }
   </style>
 </head>
@@ -42,9 +65,19 @@
 
     <div class="box box1">
       <div class="title">填写信息</div>
-      <div class="cell">
-        <div class="label">初中学校</div>
-        <input type="text" placeholder="请输入初中学校名称">
+      <div class="cell cell-school">
+        <div>
+          <div class="label">初中学校</div>
+          <select id="select">
+            <option value="请选择" selected>请选择</option>
+            <option value ="1">学校1</option>
+            <option value ="2">学校2</option>
+            <option value="3">学校3</option>
+            <option value="4">学校4</option>
+            <option value="other">其他</option>
+          </select>
+        </div>
+        <input class="school-name none" type="text" placeholder="请输入初中学校名称">      
       </div>
       <div class="cell">
         <div class="label">班级</div>
@@ -226,6 +259,16 @@
     $('.success-btn').click(function () {
       $('.model1').addClass('none')
     })
+
+    $('#select').bind('change', function() {
+      console.log(this.value)
+      if(this.value == 'other') {
+        $('.school-name').removeClass('none')
+      } else {
+        $('.school-name').addClass('none')
+      }
+    })
+
   </script>
 </body>
 
