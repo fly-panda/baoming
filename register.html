@@ -21,7 +21,7 @@
         <div class="label">身份证号</div>
         <input id="card" type="number" placeholder="请输入身份证号码">
       </div>
-      <button class="button" disabled>确认</button>
+      <div class="button" disabled>确认</div>
     </div>
   </div>
 
@@ -45,24 +45,27 @@
       let card = $('#card').val()
       if(name && card) {
         console.log(11111)
-        $('button').removeAttr('disabled')
+        $('.button').removeAttr('disabled')
       } else {
-        $('button').attr('disabled','disabled')
+        $('.button').attr('disabled','disabled')
       }
     });
     $("#card").bind('input propertychange',function(){
       let card = $(this).val()
       let name = $('#name').val()
       if(name && card) {
-        $('button').removeAttr('disabled')
+        $('.button').removeAttr('disabled')
       } else {
-        $('button').attr('disabled','disabled')
+        $('.button').attr('disabled','disabled')
       }
     });
     $('.close-model').click(function() {
       $('.model').removeClass('block')
     })
     $('.button').click(function() {
+      if($(this).attr('disabled') == 'disabled') {
+        return
+      }
       $('.model').addClass('block')
     })
   </script>

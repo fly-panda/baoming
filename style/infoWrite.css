@@ -58,7 +58,7 @@ body {
   text-align: right;
 }
 
-button {
+.submit-btn {
   border-radius: 20px;
   width: 16rem;
   height: 40px;
@@ -339,4 +339,41 @@ button[disabled] {
   position: absolute;
   clip:rect(0,0,0,0);       /* 隐藏方式一：裁剪为0 */
   /* visibility: hidden; */ /* 隐藏方式二：隐藏属性 */
+}
+
+select {
+  appearance:none;
+  -moz-appearance:none;
+  -webkit-appearance:none;
+}
+.submit-box{padding: 30px 0;margin-top: 12px;}
+.bmxz-btn[disabled] {
+  background: #F0F0F0;
+  box-shadow: 0 6px 20px 0 rgba(63, 212, 129, 0);
+}
+input[type="checkbox"] {
+  -webkit-appearance: checkbox;
+  box-sizing: border-box;
+  margin-right: 4px;
+  width: 19px;
+  height: 19px;
+}
+select {
+  background: #fff;
+  font-size: 14px;
+  direction: rtl;
+  flex: 1;
+}
+.school-name {
+  width: 100%;
+  margin-top: 10px;
+}
+.cell-school {
+  flex-direction: column;
+}
+.cell-school > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }

@@ -18,7 +18,7 @@
     .box {line-height: 30px;}
     p{font-size: 14px;color: #0F0F0F;}
     .lcimg {width: 100%;}
-    button {
+    .bmxz-btn {
       background: #3FD481;
       box-shadow: 0 6px 20px 0 rgba(63, 212, 129, 0.74);
       border-radius: 20px;
@@ -125,14 +125,13 @@
           <label for="check">我已阅读相关材料</label>
         </div>
         <div>
-          <button class="bmxz-btn" disabled>同意</button>
+          <div class="bmxz-btn" disabled>同意</div>
         </div>
       </div>
     </div>
   
   <script src="http://libs.baidu.com/jquery/2.1.1/jquery.min.js"></script>
   <script>
-    console.log(11)
     $('#check').removeAttr('checked')
     $('#check').change(function() {
       if($(this).prop('checked') == true) {
@@ -142,6 +141,9 @@
       }
     })
     $('.bmxz-btn').click(function () {
+      if(!$('#check').prop('checked')) {
+        return
+      }
       window.location.href = 'list.html'
     })
   </script>
